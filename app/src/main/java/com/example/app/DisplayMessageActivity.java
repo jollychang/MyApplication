@@ -13,6 +13,7 @@ import android.os.Build;
 import android.content.Intent;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.graphics.Color;
 
 public class DisplayMessageActivity extends ActionBarActivity {
 
@@ -27,6 +28,7 @@ public class DisplayMessageActivity extends ActionBarActivity {
         // Create the text view
         TextView textView = new TextView(this);
         textView.setTextSize(40);
+        textView.setTextColor(Color.RED);
         textView.setText(message);
 
         // Set the text view as the activity layout
