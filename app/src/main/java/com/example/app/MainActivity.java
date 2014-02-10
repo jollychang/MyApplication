@@ -22,6 +22,8 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        setContentView(R.layout.activity_display_message);
+//        getSupportAcionBar().setDisplayHomeAsUpEnabled(true);
 
 //        if (savedInstanceState == null) {
 //            getSupportFragmentManager().beginTransaction()
@@ -36,6 +38,8 @@ public class MainActivity extends ActionBarActivity {
         
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+//        getMenuInflater().inflate(R.menu.main_activity_actions, menu);
+//        return super.onCreateOptionsMenu(menu);
         return true;
     }
 
@@ -46,6 +50,11 @@ public class MainActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
+            return true;
+        }
+        else if (id == R.id.action_search){
+//            openSearch();
+            Log.v("MyActivity", "open search");
             return true;
         }
         return super.onOptionsItemSelected(item);
