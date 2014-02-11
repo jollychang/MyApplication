@@ -14,6 +14,7 @@ import android.os.Build;
 import android.content.Intent;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.net.Uri;
 
 public class MainActivity extends ActionBarActivity {
     public final static String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
@@ -55,6 +56,9 @@ public class MainActivity extends ActionBarActivity {
         else if (id == R.id.action_search){
 //            openSearch();
             Log.v("MyActivity", "open search");
+            Uri webpage = Uri.parse("http://www.android.com");
+            Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
+            startActivity(webIntent);
             return true;
         }
         return super.onOptionsItemSelected(item);
